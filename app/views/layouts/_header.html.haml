@@ -1,0 +1,15 @@
+=image_tag("logo.png", :alt => "MemoSmart", :class=>"round")
+%nav{:class=>"round"}
+  %ul
+    %li
+      =link_to "home", root_path
+    -if signed_in?
+      %li
+        =link_to "Profile", current_user
+    %li
+      =link_to "help", help_path
+    %li
+      -if signed_in?
+        =link_to "sign out", signout_path, :method=>:delete
+      -else
+        =link_to "sign_in", signin_path
