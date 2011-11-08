@@ -1,15 +1,23 @@
 %html
-  = stylesheet_link_tag 'screen' , 'custom'
+  = stylesheet_link_tag 'screen' , 'sociarate'
+
+  -#%body
+  -#  %div{:class=>"container"}
+  -#    %header
+  -#      =render 'layouts/header'
+  -#    %section{:class=>"round"}
+  -#      -flash.each do|key,value|
+  -#        %div{:class=>"flash #{key}"}
+  -#          =value
+  -#      =yield
+  -#    %footer
+  -#      =render 'layouts/footer'
+  -#    = debug(params) if Rails.env.development?
 
   %body
-    %div{:class=>"container"}
-      %header
-        =render 'layouts/header'
-      %section{:class=>"round"}
-        -flash.each do|key,value|
-          %div{:class=>"flash #{key}"}
-            =value
-        =yield
-      %footer
-        =render 'layouts/footer'
-      = debug(params) if Rails.env.development?
+    %header.clearfix
+
+      =render 'layouts/header'
+    %section{:class=>"container"}
+      =yield
+    %footer
