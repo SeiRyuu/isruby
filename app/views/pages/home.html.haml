@@ -1,10 +1,30 @@
-%h1
-  Sample App
+%div{:class=>"tag_line"}
+  Step 1 : Drag and Drop
 
-%p
-  This is the home page for the
-  %a{:href=>"http://railstutorial.org/" }
-    Ruby on Rails Tutorial
-  &nbsp sample application.
 
-=link_to "Sign up now!", '#', :class => "signup_button round"
+%div{:class=>"all_images"}
+  %div
+    =image_tag("/images/arrow_right.png",:class=>"right_arrow")
+  %div
+    =image_tag("/images/arrow_left.png",:class=>"left_arrow")
+  %ul
+    -@images.each_with_index do |image,index|
+      %li
+        %ul
+          %li
+          =image_tag("/images/boards/#{image}",:class=>"board_images clearfix")
+          &nbsp;
+          %li{:class => "user_profile_small"}
+            Sebastian Lee
+            -(0..index).each do |count|
+              -unless count == 5
+                =image_tag("/images/g-icon-new-favourite.png",:class =>"rating_stars")
+          %li
+            &nbsp;
+
+
+
+
+-#%br
+-#  =link_to "Sign up now!", '#', :class => "signup_button"
+

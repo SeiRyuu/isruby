@@ -1,5 +1,6 @@
 %html
-  = stylesheet_link_tag 'screen' , 'sociarate'
+  = stylesheet_link_tag 'screen' , 'sociarate' ,'http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy'
+
 
   -#%body
   -#  %div{:class=>"container"}
@@ -21,3 +22,4 @@
     %section{:class=>"container"}
       =yield
     %footer
+      =render 'layouts/footer'

@@ -10,7 +10,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110523182201) do
+ActiveRecord::Schema.define(:version => 20111110060518) do
+
+  create_table "images", :force => true do |t|
+    t.string   "name"
+    t.string   "format_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "user",        :default => "Sebastian Lee"
+    t.integer  "no_of_stars", :default => 1
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name"

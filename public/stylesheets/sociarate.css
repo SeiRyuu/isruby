@@ -5,7 +5,7 @@ header{
     background:url("/images/sharkskin.gif");
     width:100%;
     color: #999999;
-    padding: 0.5em 0.5em 0.5em 0.5em;
+    padding-bottom: 0.5em;
 }
 
 header h3 {
@@ -14,7 +14,6 @@ header h3 {
     padding-right: 5em;
     padding-top: 0.8em;
 }
-
 nav ul li{
   white-space: nowrap;
   display: inline-block;
@@ -31,6 +30,131 @@ nav ul li a{
 
 nav ul li a:hover {
   color:#ffffff;
+}
+
+/*body*/
+
+body{
+    background:url("/images/g-background-noise.gif");
+    background-color: #ffffff;
+    background-repeat: repeat;
+    width:100%;
+    color: #999999;
+    height: 50px;
+    position: relative;
+}
+
+.tag_line{
+    position: relative;
+    text-align: left;
+    padding: 1em 1em;
+    font-size: 16px;
+    font-family: 'Sorts Mill Goudy', serif;
+}
+
+hr{
+    height: 0.3em;
+}
+
+
+
+.right_column{
+ position: relative;
+ top:10px;
+}
+
+.signup_button{
+    position: relative;
+    float:right;
+}
+
+/*board images*/
+.board_images{
+    border: solid 1px #ffffff;
+    background-color: #ffffff;
+	-moz-box-shadow: 1px 1px 5px #999;
+	-webkit-box-shadow: 1px 1px 5px #999;
+    box-shadow: 1px 1px 5px #999;
+    padding: 2em;
+    height: 165px;
+    width: 200px;
+}
+
+.all_images{
+    position: relative;
+    width: 864px;
+    margin: 0 auto;
+
+}
+
+.all_images ul li{
+  white-space: nowrap;
+  display: inline-block;
+  list-style-type: none;
+}
+
+.all_images ul li ul li{
+  white-space: nowrap;
+  display: block;
+  list-style-type: none;
+}
+
+.user_profile_small{
+    padding: 0.2em;
+}
+
+.rating_stars{
+    height: 20px;
+    width:20px;
+    left:-0.4em;
+    position: relative;
+    float:right;
+}
+
+.right_arrow{
+    position: absolute;
+    width:50px;
+    height:50px;
+    top: 211px;
+    left: 871px;
+
+}
+
+
+.left_arrow{
+    position: absolute;
+    width:50px;
+    height:50px;
+    top: 210px;
+    left:-41px;
+}
+/*footer*/
+
+footer{
+    top:50px;
+    background-color: #ffffff;
+
+    background-repeat: repeat;
+    width:100%;
+    color: #999999;
+    height: 50px;
+    position: relative;
+}
+
+footer nav ul li{
+  white-space: nowrap;
+  display: inline-block;
+  padding-right: 1em;
+  position: relative ;
+  float:left;
+  left:43%;
+  top:-15px;
+  list-style-type: none;
+  text-align: center;
+}
+
+footer nav ul li a:hover {
+  color: #333333;
 }
 
 
