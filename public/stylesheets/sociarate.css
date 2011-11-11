@@ -78,6 +78,8 @@ hr{
     padding: 2em;
     height: 165px;
     width: 200px;
+    z-index: 1;
+    position:relative;
 }
 
 .all_images{
@@ -99,8 +101,14 @@ hr{
   list-style-type: none;
 }
 
-.user_profile_small{
-    padding: 0.2em;
+
+.draggable_profile{
+    width:250px;
+    height:48px;
+    position: relative;
+}
+
+.image_and_profile{
 }
 
 .rating_stars{
@@ -116,8 +124,29 @@ hr{
     width:50px;
     height:50px;
     top: 211px;
-    left: 871px;
+    left: 851px;
 
+}
+
+.all_drop_ables{
+    position: absolute;
+
+
+}
+
+.droppable_place_highlight{
+    background-color:#000000;
+}
+
+.drop_able_place{
+    border: solid 1px #ffffff;
+	-moz-box-shadow: 1px 1px 5px #999;
+	-webkit-box-shadow: 1px 1px 5px #999;
+    box-shadow: 1px 1px 5px #999;
+    padding: 2em;
+    height: 165px;
+    width: 200px;
+    z-index: 1;
 }
 
 
@@ -131,14 +160,12 @@ hr{
 /*footer*/
 
 footer{
-    top:50px;
+    top:680px;
     background-color: #ffffff;
-
-    background-repeat: repeat;
     width:100%;
     color: #999999;
-    height: 50px;
-    position: relative;
+    height: 100px;
+    position: absolute;
 }
 
 footer nav ul li{
@@ -148,7 +175,6 @@ footer nav ul li{
   position: relative ;
   float:left;
   left:43%;
-  top:-15px;
   list-style-type: none;
   text-align: center;
 }

@@ -1,26 +1,42 @@
 %div{:class=>"tag_line"}
   Step 1 : Drag and Drop
 
-
 %div{:class=>"all_images"}
-  %div
-    =image_tag("/images/arrow_right.png",:class=>"right_arrow")
-  %div
-    =image_tag("/images/arrow_left.png",:class=>"left_arrow")
-  %ul
+  %ul{:class=>"all_drop_ables"}
     -@images.each_with_index do |image,index|
       %li
         %ul
+          %div
+          %li{:class=>"drop_able_place"}
+
+          %li{:class=>"draggable_profile"}
+
+
+
+%div{:class=>"all_images"}
+  %div
+    %a{:href=>"../pages/1"}
+      =image_tag("/images/arrow_right.png",:class=>"right_arrow")
+  %div
+    %a{:href=>"../pages"}
+      =image_tag("/images/arrow_left.png",:class=>"left_arrow")
+
+
+  %ul
+    -@images.each_with_index do |image,index|
+      %li
+        %ul{:class=>"image_and_profile"}
+          %div
           %li
-          =image_tag("/images/boards/#{image}",:class=>"board_images clearfix")
-          &nbsp;
-          %li{:class => "user_profile_small"}
+            =image_tag("/images/boards/#{image}",:class=>"board_images")
+          %li
+            %br
             Sebastian Lee
             -(0..index).each do |count|
               -unless count == 5
                 =image_tag("/images/g-icon-new-favourite.png",:class =>"rating_stars")
-          %li
-            &nbsp;
+            %br
+              &nbsp;
 
 
 
