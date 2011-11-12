@@ -10,6 +10,7 @@ group :development do
   gem 'annotate', '>=1.0.4'
   gem 'heroku'
   gem 'pg'
+  gem 'taps'
 end
 
 group :test do
