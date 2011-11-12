@@ -9,6 +9,7 @@ group :development do
   gem 'rspec-rails', '2.5.0'
   gem 'annotate', '>=1.0.4'
   gem 'heroku'
+  gem 'pg'
 end
 
 group :test do
