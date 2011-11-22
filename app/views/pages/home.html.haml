@@ -3,7 +3,7 @@
 
 %div{:class=>"all_images"}
   %ul{:class=>"all_drop_ables"}
-    -@images.each_with_index do |image,index|
+    -(1..6).each_with_index do |image,index|
       %li
         %ul
           %div
@@ -15,10 +15,10 @@
 
 %div{:class=>"all_images"}
   %div
-    %a{:href=>"../pages/1"}
+    %a{:href=>"../pages/#{@id + 1}"}
       =image_tag("/images/arrow_right.png",:class=>"right_arrow")
   %div
-    %a{:href=>"../pages"}
+    %a{:href=>"../pages/#{@id - 1}"}
       =image_tag("/images/arrow_left.png",:class=>"left_arrow")
 
 
@@ -37,6 +37,8 @@
                 =image_tag("/images/g-icon-new-favourite.png",:class =>"rating_stars")
             %br
               &nbsp;
+
+
 
 
 -#  =link_to "Sign up now!", '#', :class => "signup_button"

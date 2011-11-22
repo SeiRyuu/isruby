@@ -9,10 +9,16 @@ $().ready(function(){
                 var top_position =$(this).position().top;
                 var draggable_left = ui.position.x;
                 var draggable_top = ui.position.y;
-				ui.draggable.css("left",left_position - 17).css("top",top_position).css("position","absolute");
+				ui.draggable.css("left",left_position - 18).css("top",top_position).css("position","absolute");
                 $(this).css("left",draggable_left).css("top",draggable_top)
         }
-    }) ;
+    });
+    $(".home_link").hover(function(){
+        $(".home_icon").show() ;
+    }
+   ,function(){
+        $(".home_icon").hide () ;
+    } )
 
 });
 

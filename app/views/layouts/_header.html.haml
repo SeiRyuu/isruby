@@ -1,7 +1,10 @@
 %h3
-  &nbsp;&nbsp;SociaRate
+  =image_tag("/images/icons/logo.png",{:width=>"100px",:height=>"40px",:style=>"padding-left:20px;padding-bottom:5px"} )
 %nav
   %ul
+    %li
+      %div{:class=>"search_header"}
+        =text_field(:header,:search,:value=>"search")
     %li
       -if signed_in?
         =link_to "sign out", signout_path, :method=>:delete
@@ -12,7 +15,9 @@
       =link_to "help", help_path
 
     %li
-      =link_to "home", root_path
+      =link_to "home", root_path,:class=>"home_link"
+      %div{:class=>"home_icon"}
+
     -if signed_in?
       %li
         =link_to "Profile", current_user

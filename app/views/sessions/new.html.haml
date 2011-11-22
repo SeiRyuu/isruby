@@ -1,16 +1,21 @@
-%h1
-  Sign in
--form_for(:session, :url => sessions_path) do |f|
-  %div{:class=>'field'}
-    =f.label :email
+%div{:class=>"signin_form"}
+  %br
+  %h3{:class=>"tag_line"}
+    Sign in
+  %hr
+  -form_for(:session, :url => sessions_path) do |f|
+    %div{:class=>'field'}
+      =f.label :email
+      &nbsp; &nbsp;
+      =f.text_field :email  ,:class=>"text_field"
+    %div{:class=>"field"}
+      =f.label :password
+      &nbsp; &nbsp;
+      =f.password_field :password ,:class=>"text_field"
     %br
-    =f.text_field :email
-  %div{:class=>"field"}
-    =f.label :password
-    %br
-    =f.password_field :password
-  %div{:class=>"actions"}
-    =f.submit "sign in"
-%p
-  New Users
-  = link_to "Sign up now", signup_path
+    %div{:class=>"actions field"}
+      =f.submit "sign in"
+  %br
+  %p{:style=>"text-align:right"}
+    New Users &nbsp;
+    = link_to "Sign up now", signup_path
