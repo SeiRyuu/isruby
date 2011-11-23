@@ -13,12 +13,6 @@ $().ready(function(){
                 $(this).css("left",draggable_left).css("top",draggable_top)
         }
     });
-    $(".home_link").hover(function(){
-        $(".home_icon").show() ;
-    }
-   ,function(){
-        $(".home_icon").hide () ;
-    } )
 
 });
 

@@ -1,23 +1,37 @@
 %h3
-  =image_tag("/images/icons/logo.png",{:width=>"100px",:height=>"40px",:style=>"padding-left:20px;padding-bottom:5px"} )
+  =image_tag("/images/icons/logo.png",{:width=>"85px",:height=>"40px",:style=>"padding-left:20px;padding-bottom:10px;position:relative;top:-5px"} )
+
+%nav{:class=>"header_link"}
+
+
+  -if signed_in?
+    %li
+      =link_to "Profile", current_user
+  %li
+    =link_to "Home", root_path,:class=>"home_link"
+
+
+
+
+  %li
+    =link_to "Help", help_path
+
+
+
+  %li
+    -if signed_in?
+      =link_to "Sign out", signout_path, :method=>:delete
+    -else
+      =link_to "Sign in", signin_path
+
+
+
 %nav
   %ul
     %li
+      %button{:style=>"position:relative;top:5px;left:-12px;height:25px;border-radius:6px;"}
+        Go
+    %li
       %div{:class=>"search_header"}
         =text_field(:header,:search,:value=>"search")
-    %li
-      -if signed_in?
-        =link_to "sign out", signout_path, :method=>:delete
-      -else
-        =link_to "sign in", signin_path
 
-    %li
-      =link_to "help", help_path
-
-    %li
-      =link_to "home", root_path,:class=>"home_link"
-      %div{:class=>"home_icon"}
-
-    -if signed_in?
-      %li
-        =link_to "Profile", current_user

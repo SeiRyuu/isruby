@@ -1,21 +1,39 @@
-%div{:class=>"signin_form"}
-  %br
-  %h3{:class=>"tag_line"}
-    Sign in
-  %hr
-  -form_for(:session, :url => sessions_path) do |f|
-    %div{:class=>'field'}
-      =f.label :email
-      &nbsp; &nbsp;
-      =f.text_field :email  ,:class=>"text_field"
-    %div{:class=>"field"}
-      =f.label :password
-      &nbsp; &nbsp;
-      =f.password_field :password ,:class=>"text_field"
-    %br
-    %div{:class=>"actions field"}
-      =f.submit "sign in"
-  %br
-  %p{:style=>"text-align:right"}
-    New Users &nbsp;
-    = link_to "Sign up now", signup_path
+= stylesheet_link_tag 'screen' , 'sociarate' ,'http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy|Bitter','jquery_ui','user'
+
+= javascript_include_tag 'jquery','jquery_ui','application'
+%body{:class=>"signin"}
+
+  %div{:class=>"container"}
+    %h3{:class=>"tag_line" ,:style=>"text-align:center;font-family:'bitter';font-size:38px;color:white;opacity:0.7"}
+      Sign in
+
+    %div{:style=>"text-align:center;font-family:'bitter';font-size:24px;color:white;opacity:0.7"}
+      or
+    %div{:class=>"signin_form"}
+
+      -form_for(:session, :url => sessions_path) do |f|
+        %div{:class=>'field'}
+          =f.label :email ,:style=>"color:white;opacity:0.7;"
+          &nbsp; &nbsp;
+          =f.text_field :email  ,:class=>"text_field"
+        %div{:class=>"field"}
+          =f.label :password ,:style=>"color:white;opacity:0.7;"
+          &nbsp; &nbsp;
+          =f.password_field :password ,:class=>"text_field"
+        %br
+
+        %div{:class=>"actions field"}
+          =f.submit "sign in"
+      %br
+      %p{:style=>"text-align:right;"}
+        New Users &nbsp;
+        = link_to "Sign up now", signup_path
+
+
+    %div{:class=>"signin_facebook" }
+      %br
+      =image_tag("/images/icons/facebook.png" ,{:width=>"120px",:height=>"50px",:style=>"position:relative;padding-left:0px;top:-15px"})
+      %br
+      %br
+      =image_tag("/images/icons/twitter.png" ,{:width=>"120px",:height=>"30px",:style=>"position:relative;padding-left:8px;top:-20px"})
+

@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
   def new
     @title = "Sign in"
+    render :layout =>false
   end
 
   def create
