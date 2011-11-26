@@ -2,7 +2,12 @@
 // This file is automatically included by javascript_include_tag :defaults
 $().ready(function(){
 
-    $(".image_and_profile").draggable({revert:"invalid"});
+    $(".image_and_profile_0").draggable({revert:"invalid"});
+    $(".image_and_profile_1").draggable({revert:"invalid"});
+    $(".image_and_profile_2").draggable({revert:"invalid"});
+    $(".image_and_profile_3").draggable({revert:"invalid"});
+    $(".image_and_profile_4").draggable({revert:"invalid"});
+    $(".image_and_profile_5").draggable({revert:"invalid"});
     $(".drop_able_place").droppable({
         drop: function( event, ui ) {
                 var left_position = $(this).position().left;

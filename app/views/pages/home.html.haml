@@ -1,9 +1,22 @@
 %div{:class=>"tag_line"}
-  Step 1 : Drag and Drop
+  %span{:style=>"color:black"}
+    Got lost in conversation?
+  %span{:style=>"color:grey;font-size:14px"}
+    Sociarate provide you with the insights on the happenings around you
+    %br
+    %br
+  %span{:class=>"interest_link" ,:style=>"padding-left:0px;"}
+    Parties
+  %span{:class=>"interest_link"}
+    Events
+  %span{:class=>"interest_link"}
+    Charity
+    %br
+    %hrs
 
 %div{:class=>"all_images"}
   %ul{:class=>"all_drop_ables"}
-    -(1..6).each_with_index do |image,index|
+    -(1..6).each_with_index do |index|
       %li
         %ul
           %div
@@ -22,10 +35,10 @@
       =image_tag("/images/arrow_left.png",:class=>"left_arrow")
 
 
-  %ul
+  %ul{:class=>"all_draggable_image"}
     -@images.each_with_index do |image,index|
       %li
-        %ul{:class=>"image_and_profile"}
+        %ul{:class=>"image_and_profile_#{index}"}
           %div
           %li
             =image_tag("/images/boards/#{image}",:class=>"board_images")

@@ -1,15 +1,46 @@
 
-%table{:class=>"profile", :summary=>"Profile information"}
-  %tr
-    %td{:class=>"main"}
-      %h1
-        = gravatar_for @user
-        = @user.name
-    %td{:class=>"sidebar round"}
-      %strong
-        Name
-        = @user.name
+%ul{:class=>"user_show"}
+  %li{:class=>"user_show_right"}
+    %h1
+      = #gravatar_for @user
+      = image_tag("/images/profile_page.jpg",:width => "200px", :height => "150px",:class=>"profile_image")
       %br
+
+  %li{:class=>"user_show_left"}
+    %span{:style=>"font-size:48px;"}
+      = @user.name
+    %br
+    =#link_to user_path(@user), @user
+    %div
+      I came from a tiny little country called
       %strong
-        URL
-        =link_to user_path(@user), @user
+        Singapore
+      %br
+      Currently working in a small humble company called
+      %strong
+        Rocket Fuel
+      %br
+      as a motivated and productive
+      %strong
+        Software engineer interns
+      %br
+      My day has been doing
+      %strong
+        Great
+      %br
+      I like playing
+      %strong
+        Basketball, Photography
+      %br
+      %br
+      %br
+      Things that you liked
+      %div{:class=>"all_thumbnails" }
+        = image_tag("/images/boards/1.jpg",:class=>"thumbnail")
+        = image_tag("/images/boards/2.jpg",:class=>"thumbnail")
+        = image_tag("/images/boards/3.png",:class=>"thumbnail")
+        = image_tag("/images/boards/4.png",:class=>"thumbnail")
+        = image_tag("/images/boards/5.png",:class=>"thumbnail")
+        = image_tag("/images/boards/6.png",:class=>"thumbnail")
+        = image_tag("/images/boards/7.jpg",:class=>"thumbnail")
+        = image_tag("/images/boards/8.jpg",:class=>"thumbnail")

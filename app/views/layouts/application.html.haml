@@ -1,5 +1,5 @@
 %html
-  = stylesheet_link_tag 'screen' , 'sociarate' ,'http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy|Bitter','jquery_ui','user'
+  = stylesheet_link_tag 'screen' , 'sociarate' ,'http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy|Bitter|Signika','jquery_ui','user'
 
   = javascript_include_tag 'jquery','jquery_ui','application'
 
@@ -22,5 +22,6 @@
       =render 'layouts/header'
     %section{:class=>"container"}
       =yield
+    %div{:class=>"clearfix"}
     %footer
       =render 'layouts/footer'
