@@ -330,6 +330,14 @@ hr{
 
 }
 
+.date_line{
+    position: relative;
+    width:100px;
+    border-radius: 4px;
+    background-color: #F5F5F5;
+
+}
+
 .all_drop_ables{
     position: relative;
 }

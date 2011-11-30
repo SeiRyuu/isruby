@@ -8,6 +8,10 @@
     =image_tag("/images/icons/facebook.jpg" ,{:width=>"70px",:height=>"25px",:style=>"top:10px;position:relative;padding-right:20px;padding-left:50px;"})
     =image_tag("/images/icons/twitter.png" ,{:width=>"100px",:height=>"25px",:style=>"top:10px;position:relative;"})
   %br
+  %div{:id=>"fb-root"}
+  %div{:class=>"fb-login-button"}
+    Login with Facebook
+
 
   %hr
     Or you would prefer
@@ -55,6 +59,22 @@
     Ali will be a hippie
     %br
     Sebastian will make noise
+
+%script
+  window.fbAsyncInit = function() {
+  FB.init({
+  appId      : '191117997642609',
+  status     : true,
+  cookie     : true,
+  xfbml      : true
+  });
+  };
+  (function(d){
+  var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+  js = d.createElement('script'); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js";
+  d.getElementsByTagName('head')[0].appendChild(js);
+  }(document));
 
 
 

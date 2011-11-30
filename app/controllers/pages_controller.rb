@@ -6,6 +6,7 @@ class PagesController < ApplicationController
 
     @title = "Home"
     @images = Image.all(:limit=>6,:offset => @id*6).collect{|image| "#{image.name}.#{image.format_type}"}
+    @name = Image.all.collect{|x| x.name}
     @users = ["Sebastian Lee","Arthur Ng","Dennis Ong","Shawn Toh","Justin Lim","Ali","Kenny Khek" ]
   end
 

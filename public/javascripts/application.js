@@ -19,6 +19,7 @@ $().ready(function(){
         }
     });
 
+    $('.date_line').daterangepicker();
 });
 
 

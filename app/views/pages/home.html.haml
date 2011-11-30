@@ -6,11 +6,15 @@
     %br
     %br
   %span{:class=>"interest_link" ,:style=>"padding-left:0px;"}
-    Parties
+    Latest
   %span{:class=>"interest_link"}
-    Events
+    Popular
   %span{:class=>"interest_link"}
-    Charity
+    Trending
+  %span{:style=>"float:right;font-size:12px;"}
+    Since
+    &nbsp;
+    =text_field(:date,:line,:class=>"date_line")
     %br
     %hrs
 
@@ -38,8 +42,10 @@
   %ul{:class=>"all_draggable_image"}
     -@images.each_with_index do |image,index|
       %li
+
         %ul{:class=>"image_and_profile_#{index}"}
-          %div
+          %div{:style=>"position:absolute;z-index:2;margin:0;padding-left:100px"}
+            ="Title"
           %li
             =image_tag("/images/boards/#{image}",:class=>"board_images")
           %li
