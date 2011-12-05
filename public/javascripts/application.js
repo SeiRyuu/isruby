@@ -20,6 +20,15 @@ $().ready(function(){
     });
 
     $('.date_line').daterangepicker();
+
+    $('.right_arrow').click(function(){
+        $(".container").fadeOut();
+    });
+
+
+    $('.left_arrow').click(function(){
+        $(".container").fadeOut();
+    });
 });
 
 

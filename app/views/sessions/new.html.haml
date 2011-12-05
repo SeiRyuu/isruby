@@ -4,36 +4,51 @@
 %body{:class=>"signin"}
 
   %div{:class=>"container"}
-    %h3{:class=>"tag_line" ,:style=>"text-align:center;font-family:'bitter';font-size:38px;color:white;opacity:0.7"}
-      Sign in
+    %h3{:class=>"tag_line" ,:style=>"text-align:center;font-family:'bitter';font-size:38px;"}
+      Socia Rate
+    %div{:style=>"text-align:center;font-family:'bitter';font-size:24px;top:120px;left:600px;position:absolute"}
 
-    %div{:style=>"text-align:center;font-family:'bitter';font-size:24px;color:white;opacity:0.7"}
-      or
+    %div{:class=>"signin_facebook" }
+      %br
+        %div{:class=>"inset"}
+
+          %div{:class=>"login_button fb"}
+            %div{:class=>"logo_wrapper"}
+              =image_tag("/images/icons/Facebook-icon2.png" ,{:width=>"30px",:height=>"30px",:style=>"position:absolute;padding:5px 4px 4px 4px;"})
+            %div{:class=>"login_button_title"}
+              Log in with Facebook
+      %br
+      %br
+      %br
+        %div{:class=>"inset"}
+
+          %div{:class=>"login_button tw"}
+            %div{:class=>"logo_wrapper"}
+              =image_tag("/images/icons/twitter-icon.png" ,{:width=>"30px",:height=>"30px",:style=>"position:absolute;padding:5px 4px 4px 4px;"})
+            %div{:class=>"login_button_title"}
+              Log in with Twitter
+
+      =#image_tag("/images/icons/twitter.png" ,{:width=>"120px",:height=>"30px",:style=>"position:relative;padding-left:8px;top:-20px"})
+
+
     %div{:class=>"signin_form"}
 
       -form_for(:session, :url => sessions_path) do |f|
         %div{:class=>'field'}
-          =f.label :email ,:style=>"color:white;opacity:0.7;"
+          =f.label :email
           &nbsp; &nbsp;
           =f.text_field :email  ,:class=>"text_field"
         %div{:class=>"field"}
-          =f.label :password ,:style=>"color:white;opacity:0.7;"
+          =f.label :password
           &nbsp; &nbsp;
           =f.password_field :password ,:class=>"text_field"
         %br
 
         %div{:class=>"actions field"}
-          =f.submit "sign in"
+          =f.submit "sign in"  ,:class=>"button"
       %br
       %p{:style=>"text-align:right;"}
         New Users &nbsp;
         = link_to "Sign up now", signup_path
 
-
-    %div{:class=>"signin_facebook" }
-      %br
-      =image_tag("/images/icons/facebook.png" ,{:width=>"120px",:height=>"50px",:style=>"position:relative;padding-left:0px;top:-15px"})
-      %br
-      %br
-      =image_tag("/images/icons/twitter.png" ,{:width=>"120px",:height=>"30px",:style=>"position:relative;padding-left:8px;top:-20px"})
 

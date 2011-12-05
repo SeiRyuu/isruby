@@ -11,12 +11,13 @@
     Popular
   %span{:class=>"interest_link"}
     Trending
+
   %span{:style=>"float:right;font-size:12px;"}
-    Since
+
     &nbsp;
-    =text_field(:date,:line,:class=>"date_line")
-    %br
-    %hrs
+    =text_field(:date,:line,:class=>"date_line",:style=>"color:grey;padding-left:10px;width:150px;",:value=>"Since ....")
+  %hr
+
 
 %div{:class=>"all_images"}
   %ul{:class=>"all_drop_ables"}
@@ -45,7 +46,7 @@
 
         %ul{:class=>"image_and_profile_#{index}"}
           %div{:style=>"position:absolute;z-index:2;margin:0;padding-left:100px"}
-            ="Title"
+            1020 seen it
           %li
             =image_tag("/images/boards/#{image}",:class=>"board_images")
           %li
@@ -55,7 +56,9 @@
               -unless count == 5
                 =image_tag("/images/g-icon-new-favourite.png",:class =>"rating_stars")
             %br
-              &nbsp;
+
+=image_tag('/images/trashbin.png',:class=>"trashbin")
+=image_tag('/images/leopard-folder.png',:class=>"folder")
 
 
 

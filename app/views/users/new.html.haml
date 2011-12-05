@@ -5,12 +5,14 @@
   %hr
     Sign up with
   %div{:class=>"Sign_up_facebook"}
-    =image_tag("/images/icons/facebook.jpg" ,{:width=>"70px",:height=>"25px",:style=>"top:10px;position:relative;padding-right:20px;padding-left:50px;"})
-    =image_tag("/images/icons/twitter.png" ,{:width=>"100px",:height=>"25px",:style=>"top:10px;position:relative;"})
+    %div{:class=>"fb-login-button"}
+      Facebook
+    %br
+    -#Login with &nbsp
+    -#=image_tag("/images/icons/twitter.png" ,{:width=>"50px",:height=>"15px",:style=>"top:3px;position:relative;"})
   %br
   %div{:id=>"fb-root"}
-  %div{:class=>"fb-login-button"}
-    Login with Facebook
+
 
 
   %hr
